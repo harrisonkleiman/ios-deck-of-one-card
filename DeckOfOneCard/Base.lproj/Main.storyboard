@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="m1u-yS-iJ0">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card View Controller-->
+        <scene sceneID="3h3-Vc-Hmu">
+            <objects>
+                <viewController id="m1u-yS-iJ0" customClass="CardViewController" customModule="DeckOfOneCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mni-LA-dLU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Lbv-Te-F33">
+                                <rect key="frame" x="149" y="412" width="116" height="82"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(value) of (suit)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vI5-UD-ky6">
+                                        <rect key="frame" x="0.0" y="0.0" width="116" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7R9-j5-OZ3">
+                                        <rect key="frame" x="33" y="32" width="50" height="50"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jmy-zd-o63">
+                                <rect key="frame" x="24" y="809" width="366" height="29"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <state key="normal" title="DRAW"/>
+                                <connections>
+                                    <action selector="drawButtonTapped:" destination="m1u-yS-iJ0" eventType="touchUpInside" id="xth-Re-OsE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UGh-pW-R73"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jmy-zd-o63" firstAttribute="leading" secondItem="UGh-pW-R73" secondAttribute="leading" constant="24" id="0J4-xQ-O0B"/>
+                            <constraint firstItem="Lbv-Te-F33" firstAttribute="centerY" secondItem="UGh-pW-R73" secondAttribute="centerY" id="Bm9-Ny-oL8"/>
+                            <constraint firstItem="UGh-pW-R73" firstAttribute="bottom" secondItem="jmy-zd-o63" secondAttribute="bottom" constant="24" id="Fho-Pg-qpg"/>
+                            <constraint firstItem="Lbv-Te-F33" firstAttribute="centerX" secondItem="UGh-pW-R73" secondAttribute="centerX" id="J4X-h6-ZKv"/>
+                            <constraint firstItem="UGh-pW-R73" firstAttribute="trailing" secondItem="jmy-zd-o63" secondAttribute="trailing" constant="24" id="p6O-M4-I9B"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cardImageView" destination="7R9-j5-OZ3" id="fgN-jw-UWS"/>
+                        <outlet property="cardLabel" destination="vI5-UD-ky6" id="bGy-pg-EDv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2N3-Hb-V8q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
